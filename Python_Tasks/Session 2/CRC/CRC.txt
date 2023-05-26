@@ -1,0 +1,17 @@
+The basic concept of the Cyclic Redundancy Check (CRC) algorithm is to generate a checksum (CRC value) based on a block of data, typically for the purpose of error detection in data transmission or storage. The CRC algorithm uses polynomial division to calculate the checksum.
+
+Here are the basic steps of the CRC algorithm:
+
+Polynomial Selection: A polynomial is chosen as the divisor for the CRC calculation. The choice of polynomial depends on the specific CRC standard or requirements of the system.
+
+Data Representation: The data to be checked is represented as a binary string. Each bit of the data represents one element in the binary polynomial.
+
+Checksum Generation: The CRC algorithm performs polynomial division on the data. The polynomial division is carried out using bitwise XOR operations. The division process involves dividing the data by the chosen polynomial repeatedly until the length of the remaining data is less than the length of the polynomial. The remainder obtained from the division is the CRC value.
+
+Checksum Appending: The generated CRC value is appended to the original data to form the complete transmitted or stored block.
+
+Error Detection: At the receiving or retrieval end, the same CRC algorithm is applied to the received or retrieved data (including the appended CRC value). If the calculated CRC value matches the received CRC value, it indicates that the data is likely to be error-free. If the calculated CRC value differs from the received CRC value, it indicates the presence of errors during transmission or storage.
+
+The key idea behind the CRC algorithm is that it generates a checksum that has certain mathematical properties, allowing it to detect most common errors that can occur during data transmission or storage. By comparing the calculated CRC value with the received CRC value, errors can be detected with a high probability.
+
+Different CRC standards may have variations in the specific polynomial used, the order of bits, the initial value, and other parameters. The choice of CRC algorithm depends on the requirements and standards of the specific application.
